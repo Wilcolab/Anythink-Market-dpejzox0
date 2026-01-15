@@ -30,7 +30,7 @@ app.post("/tasks", (req, res) => {
     const { text } = req.body;
     if (text) {
         tasks.push(text);
-        res.json({ message: "Task added successfully" });
+        res.status(201).json({ message: "Task added successfully" });
     } else {
         res.status(400).json({ error: "Task text is required" });
     }
