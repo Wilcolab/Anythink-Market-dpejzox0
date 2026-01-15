@@ -28,11 +28,11 @@ app.get("/tasks", (req, res) => {
 // Add a new task
 app.post("/tasks", (req, res) => {
     const { text } = req.body;
-    if (text) {
-        tasks.push(text);
+    if (typeof text === "string" && text.trim()) {
+        tasks.push(text.trim());
         res.json({ message: "Task added successfully" });
     } else {
-        res.status(400).json({ error: "Task text is required" });
+        res.status(400).json({ error: "Task text is required and must be a non-empty string" });
     }
 });
 

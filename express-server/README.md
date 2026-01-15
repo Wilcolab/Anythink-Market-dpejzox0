@@ -55,10 +55,10 @@ The server will start on `http://localhost:8001` with hot-reload enabled.
 
 ### Using Docker
 
-Run the server using Docker Compose (from the root directory):
+Run the server using Docker Compose (from the project root directory):
 
 ```bash
-cd /workspaces/Anythink-Market-dpejzox0
+cd ..
 docker compose up
 ```
 
@@ -112,10 +112,17 @@ Adds a new task to the list.
 }
 ```
 
-**Response:**
+**Success Response (200):**
 ```json
 {
   "message": "Task added successfully"
+}
+```
+
+**Error Response (400):**
+```json
+{
+  "error": "Task text is required and must be a non-empty string"
 }
 ```
 
