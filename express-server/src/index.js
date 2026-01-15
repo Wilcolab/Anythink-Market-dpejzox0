@@ -28,7 +28,7 @@ app.get("/tasks", (req, res) => {
 // Add a new task
 app.post("/tasks", (req, res) => {
     const { text } = req.body;
-    if (text) {
+    if (typeof text === "string" && text.trim()) {
         tasks.push(text);
         res.status(201).json({ message: "Task added successfully" });
     } else {
