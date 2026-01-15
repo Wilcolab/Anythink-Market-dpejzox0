@@ -53,3 +53,13 @@ To build and run the Docker container, use the following commands:
    ```
 
 The server will be accessible at `http://localhost:8001` from your host machine.
+
+## Port Configuration
+
+The Node.js Express server is configured to run on **port 8001**. This is defined in `src/index.js`:
+
+```javascript
+const PORT = 8001;
+```
+
+When running the server (either locally or via Docker), it will listen on port 8001 and be accessible at `http://localhost:8001`.
