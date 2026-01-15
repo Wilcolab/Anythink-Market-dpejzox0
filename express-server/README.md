@@ -153,11 +153,19 @@ app.get('/your-endpoint', (req, res) => {
 
 ## Port Configuration
 
-The server runs on port **8001** by default. This is configured in `src/index.js`:
+**Important:** The Node.js Express server is configured to run on **port 8001**.
+
+This is explicitly set in `src/index.js`:
 
 ```javascript
 const PORT = 8001;
 ```
+
+When accessing the server:
+- **Locally**: `http://localhost:8001`
+- **Docker**: Exposed on port 8001 via Docker Compose configuration
+
+To change the port, modify the `PORT` constant in `src/index.js`.
 
 ## Troubleshooting
 
