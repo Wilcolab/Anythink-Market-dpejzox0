@@ -1,6 +1,12 @@
 # Express Server
 
-A Node.js Express server that provides a RESTful API for managing tasks. The server listens on port 8001 and is configured with Nodemon for automatic restart during development.
+A Node.js Express server that provides a RESTful API for managing tasks. 
+
+## ⚙️ Server Configuration
+
+**The Node.js Express server runs on port 8001.**
+
+This server is configured with Nodemon for automatic restart during development.
 
 ## Project Structure
 
